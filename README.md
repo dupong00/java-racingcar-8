@@ -2,9 +2,9 @@
 
 ## 1. 자동차 이름 입력 기능
 
-- [ ]  쉼표(,)를 기준으로 자동차 이름을 분리한다.
-- [ ]  자동차 이름이 5자를 초과한 경우 IllegalArgumentException을 발생시킨다.
-- [ ]  사용자가 잘못된 값을 입력할 경우 IllegalArgumentException를 발생시킨다.
+- [x]  쉼표(,)를 기준으로 자동차 이름을 분리한다.
+- [x]  자동차 이름이 5자를 초과한 경우 IllegalArgumentException을 발생시킨다.
+- [x]  사용자가 잘못된 값을 입력할 경우 IllegalArgumentException를 발생시킨다.
 
 ## 2. 시도 횟수 입력 기능
 
