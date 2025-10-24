@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.util.List;
 import java.util.Map;
 
 public class OutputVIew {
@@ -14,5 +15,10 @@ public class OutputVIew {
             System.out.println();
         }
         System.out.println();
+    }
+
+    public static void winner_print(List<String> winners){
+        String winner = String.join(", ", winners);
+        System.out.print("최종 우승자 : " + winner);
     }
 }

@@ -17,5 +17,7 @@ public class Application {
 
             OutputVIew.race_print(currentStatus);
         }
+
+        OutputVIew.winner_print(racing.winner());
     }
 }

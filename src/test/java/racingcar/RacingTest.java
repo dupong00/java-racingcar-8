@@ -47,8 +47,21 @@ class RacingTest {
                     assertThat(carStatus.get("jun")).isEqualTo(0);
                 },
                 MOVING_FORWARD, MOVING_FORWARD, STOP
-
         );
+    }
+
+    @Test
+    @DisplayName("우승자를 반환한다.")
+    void race_winner() {
+        List<String> cars = Arrays.asList("pobi", "woni", "jun");
+        Racing racing = new Racing(cars);
+
+        assertRandomNumberInRangeTest(
+                racing::race,
+                MOVING_FORWARD, MOVING_FORWARD, STOP
+        );
+        List<String> result = racing.winner();
+        assertThat(result).containsExactly("pobi", "woni");
     }
 
 }

@@ -1,6 +1,7 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -27,5 +28,25 @@ public class Racing {
 
     public  Map<String,Integer> getCarStatus(){
         return carStatus;
+    }
+
+    public List<String> winner(){
+        int maxValue = -1;
+        List<String> result = new ArrayList<>();
+
+        for(Map.Entry<String,Integer> entry : carStatus.entrySet()){
+            String car = entry.getKey();
+            int number = entry.getValue();
+
+            if(number > maxValue){
+                maxValue = number;
+                result.clear();
+                result.add(car);
+            }
+            else if(number == maxValue){
+                result.add(car);
+            }
+        }
+        return result;
     }
 }
