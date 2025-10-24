@@ -8,8 +8,8 @@
 
 ## 2. 시도 횟수 입력 기능
 
-- [ ]  입력 값이 숫자가 아닌 경우 IllegalArgumentException를 발생시킨다.
-- [ ]  입력 값이 1 미만의 숫자의 경우 IllegalArgumentException를 발생시킨다.
+- [x]  입력 값이 숫자가 아닌 경우 IllegalArgumentException를 발생시킨다.
+- [x]  입력 값이 1 미만의 숫자의 경우 IllegalArgumentException를 발생시킨다.
 
 ## 3. 자동차 시합 진행 기능
 

@@ -72,4 +72,42 @@ class InputViewTest {
         assertThatThrownBy(InputView::readCarNames)
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("readTryCount: 입력 값이 5면 5를 반환한다.")
+    void readTryCount_success() {
+        // given
+        String input = "5";
+        setFakeInput(input);
+
+        // when
+        int tryCount = InputView.readTryCount();
+        
+        // Then
+        assertThat(tryCount).isEqualTo(5);
+    }
+
+    @Test
+    @DisplayName("readTryCount: 입력 값이 음수면 예외를 발생시킨다.")
+    void readTryCount_fail_minus() {
+        //given
+        String input = "-1";
+        setFakeInput(input);
+
+        //when & Then
+        assertThatThrownBy(InputView::readTryCount)
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    @DisplayName("readTryCount: 입력 값이 숫자가 아니면 예외를 발생시킨다.")
+    void readTryCount_fail_notNumber() {
+        //given
+        String input = "a";
+        setFakeInput(input);
+
+        //when & Then
+        assertThatThrownBy(InputView::readTryCount)
+                .isInstanceOf(IllegalArgumentException.class);
+    }
 }

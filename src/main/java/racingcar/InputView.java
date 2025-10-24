@@ -27,4 +27,26 @@ public class InputView {
             }
         }
     }
+
+    public static int readTryCount(){
+        String input = Console.readLine();
+
+        return validateTryCount(input);
+    }
+
+    private static int validateTryCount(String input){
+        int tryCount;
+
+        try {
+            tryCount = Integer.parseInt(input);
+        }catch (NumberFormatException e){
+            throw new IllegalArgumentException("시도 횟수만 숫자만 입력 가능합니다.");
+        }
+
+        if(tryCount <= 0){
+            throw new IllegalArgumentException("시도 횟수는 양수만 가능합니다.");
+        }
+
+        return tryCount;
+    }
 }
