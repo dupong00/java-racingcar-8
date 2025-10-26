@@ -4,7 +4,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +18,7 @@ class OutputVIewTest extends NsTest {
         carStatus.put("pobi", 2);
         carStatus.put("woni", 1);
 
-        OutputVIew.race_print(carStatus);
+        OutputView.racePrint(carStatus);
 
         String captureOutput = output();
         assertThat(captureOutput).contains("pobi : --");
@@ -32,7 +31,7 @@ class OutputVIewTest extends NsTest {
     void race_winner_print(){
         List<String> winners = Arrays.asList("pobi", "woni");
 
-        OutputVIew.winner_print(winners);
+        OutputView.winnerPrint(winners);
 
         String captureOutput = output();
         assertThat(captureOutput).contains("최종 우승자 : pobi, woni");
